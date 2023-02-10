@@ -32,6 +32,7 @@ router.get('/List', function(req, res) {
   });
 });
 
+
 async function createuser(req,res,next) {
   const salt = await bcrypt.genSalt();
   const hashedpassword = await bcrypt.hash(req.body.password, salt);
@@ -64,4 +65,5 @@ async function createuser(req,res,next) {
   // return user;
 }
 
+// async function signinuser
 module.exports = router;
